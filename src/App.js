@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Background from "./assets/Components/Background/Background";
+import {storeConfig} from "./assets/configs/store-config";
+import List from "./assets/Components/List/List";
+import Panel from './assets/Components/Panel/Panel';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = (props) => {
+    const panel = props.dispatch({type: storeConfig.getPanel});
+    const list = props.dispatch({type: storeConfig.getList});
+
+    return (
+        <div>
+            <Background />
+            <List
+                list={list}
+                onClick={(id) => props.dispatch(
+                    {
+                        type: storeConfig.showProj,
+                        id: id,
+                    })
+                }
+            />
+            <Panel
+                status={panel}
+                close={() => props.dispatch({
+                    type: storeConfig.closePanel
+                })}
+            />
+
+        </div>
+    );
 }
 
 export default App;
