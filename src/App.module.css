@@ -1,0 +1,9 @@
+.app {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.app img {
+    pointer-events: none;
+}

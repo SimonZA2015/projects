@@ -4,6 +4,7 @@
     grid-template-columns: 30% 70%;
     background: rgba(0, 191, 255, 0.28);
     border-radius: 20px 20px 10px 10px;
+    z-index: 1;
 }
 
 .images {
@@ -19,17 +20,48 @@
 
 .name {
     display: grid;
-    grid-template-rows: 50% 50%
+    grid-template-rows: 50% 50%;
+    position: relative;
 }
 
 .name h4 {
-    text-align: center;
+    margin: 0;
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    font-size: 70px;
+    background: linear-gradient(90deg, rgba(0,191,225,0.28) 0%, rgba(0,191,225,0.28) 77%, rgba(228, 228, 228, 0.37) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 600px) {
+    .name h4 {
+        white-space: nowrap;
+        height: 90px;
+    }
+
+    .images {
+        z-index: 99;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
 .buttons span {
-    background: deepskyblue;
+    cursor: pointer;
+    background: #84dff6;
     border-radius: 20px;
     padding: 10px;
     margin-right: 10px;
     color: white;
+    transition: .3s ease;
+}
+.buttons span:hover {
+    background: deepskyblue;
 }

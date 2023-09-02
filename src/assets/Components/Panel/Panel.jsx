@@ -11,7 +11,7 @@ const Panel = (props) => {
 
     return (
         props.status ? <div className={style.body} onClick={props.close}>
-            <div className={style.panel}>
+            <div onClick={e => e.stopPropagation()} className={style.panel}>
                 <TitleBlock
                     name={data.name}
                     text={data.text}

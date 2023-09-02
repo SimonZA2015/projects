@@ -3,8 +3,6 @@ import React from "react";
 import style from './TitleBlock.module.css';
 
 const TitleBlock = (props) => {
-    debugger
-
     function open(url) {
         window.open(url);
     }
@@ -17,6 +15,7 @@ const TitleBlock = (props) => {
 
             <div className={style.name}>
                 <h4>{props.name}</h4>
+                <div />
                 <div className={style.buttons}>
                     {props.buttons.map((data) => (
                         <span onClick={() => open(data.url)}>{data.name}</span>
