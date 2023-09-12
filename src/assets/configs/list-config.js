@@ -1,6 +1,12 @@
 import image from '../media/app_icon.png';
 import v0 from '../media/voron.png';
 import v1 from '../media/voron2.png';
+import v2 from '../media/scooter.png';
+import v3 from '../media/scooter1.jpg';
+import v4 from '../media/scooter0.jpg';
+import v5 from '../media/scooter3.jpg';
+import v6 from '../media/scooter4.jpg';
+import apk from '../media/app-debug.apk';
 
 const ListConfig = [
     {
@@ -51,7 +57,7 @@ const ListConfig = [
             "https://play-lh.googleusercontent.com/NRthfdv89ok87sWLaHKRlOZkXA_8CrB7VNUkSkp8ZZLh9QUvJdv_3nNhOOxMnjOhtC1i=w526-h296-rw"
             ],
         logo: image,
-        stack: ["JAVA"],
+        stack: ["Java", "Kotlin", "VRChatApi", "CircleImageView"],
         buttons: [{
             name: 'Google play',
             url: 'https://play.google.com/store/apps/details?id=com.denishik.vrchat',
@@ -68,8 +74,22 @@ const ListConfig = [
                 v1
             ],
         logo: "https://voron.denishik.ru/favicon.ico",
-        stack: ["JS", "React", "Firebase"],
+        stack: ["JS", "React", "Firebase", "DHCui"],
         buttons: []
+    },{
+        id: 4,
+        name: 'SC scooter',
+        text: 'App for scooter midway',
+        image: [v3,v4,v5,v6],
+        logo: v2,
+        stack: ["Java", "Material UI", "Yandex MapKit"],
+        buttons: [{
+            name: 'Google play',
+            url: 'https://play.google.com/store/apps/details?id=com.denishik.vrchat',
+        },{
+            name: 'Apk',
+            url: apk,
+        }]
     },
 ]
 

@@ -4,6 +4,7 @@ import style from './Panel.module.css';
 import TitleBlock from "./TitleBlock/TitleBlock";
 import TextBlock from "./TextBlock/TextBlock";
 import ImagesBlock from "./ImagesBlock/ImagesBlock";
+import StackBlock from "./StackBlock";
 
 const Panel = (props) => {
 
@@ -25,6 +26,7 @@ const Panel = (props) => {
                 <ImagesBlock
                     image={data.image}
                 />
+                <StackBlock texts={data.stack} />
 
             </div>
         </div> : ''

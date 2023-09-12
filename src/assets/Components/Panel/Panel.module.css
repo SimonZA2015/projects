@@ -14,9 +14,10 @@
 
 .panel {
     width: 50%;
-    height: 50%;
+    height: 60%;
     background: white;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {

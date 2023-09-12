@@ -5,6 +5,7 @@
     background: rgba(0, 191, 255, 0.28);
     border-radius: 20px 20px 10px 10px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .images {
@@ -33,17 +34,7 @@
     background: linear-gradient(90deg, rgba(0,191,225,0.28) 0%, rgba(0,191,225,0.28) 77%, rgba(228, 228, 228, 0.37) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-@media (max-width: 600px) {
-    .name h4 {
-        white-space: nowrap;
-        height: 90px;
-    }
-
-    .images {
-        z-index: 99;
-    }
+    white-space: nowrap;
 }
 
 .buttons {
@@ -64,4 +55,19 @@
 }
 .buttons span:hover {
     background: deepskyblue;
+}
+
+@media (max-width: 600px) {
+    .name h4 {
+        white-space: nowrap;
+        height: 90px;
+    }
+
+    .images {
+        z-index: 99;
+    }
+
+    .buttons {
+        justify-content: right;
+    }
 }

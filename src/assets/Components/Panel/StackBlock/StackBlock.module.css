@@ -1,14 +1,20 @@
 .body {
-    height: 59%;
     display: flex;
-    overflow-x: scroll;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px;
 }
 
-.body img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
+.body .item {
+    background: rgba(0, 191, 255, 0.28);
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    white-space: nowrap;
 }
 
 .body::-webkit-scrollbar-track {
